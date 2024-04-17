@@ -1,0 +1,59 @@
+.nav {
+  display: flex;
+  align-items: center;
+  &__list {
+    display: inherit;
+    gap: $gap-section;
+  }
+  &__item {
+    color: $secondary-collor;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 8px 4px;
+    outline: none;
+    border-radius: 2px;
+
+    transition: animation .3s ease-in-out, outline .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out;
+
+    &:hover {
+      background-repeat: no-repeat;
+      background-image:   linear-gradient(to right, $hover 100%, $hover 100%),
+          linear-gradient(to bottom, $hover 100%, $hover 100%),
+          linear-gradient(to right, $hover 100%, $hover 100%),
+          linear-gradient(to bottom, $hover 100%, $hover 100%);
+      background-size:    100% 1.5px, 1.5px 100%, 100% 1.5px, 1.5px 100%;
+      background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+
+      animation: anim-border .3s ease-in-out 1;
+    }
+
+    &:focus-visible:not(:hover) {
+      outline: 1px solid $secondary-collor;
+    }
+    &:active {
+      color: $white-text;
+      background-color: $active;
+    }
+  }
+}
+
+@keyframes anim-border {
+  0% {
+      background-size:    0 1.5px, 1.5px 0, 0 1.5px, 1.5px 0;
+  }
+  50% {
+      background-size:    0 1.5px, 1.5px 100%, 0 1.5px, 1.5px 100%;
+  }
+  100% {
+      background-size:    100% 1.5px, 1.5px 100%, 100% 1.5px, 1.5px 100%;
+  }
+}
+

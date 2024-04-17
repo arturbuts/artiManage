@@ -1,0 +1,15 @@
+@mixin btn() {
+  display: inline-block;
+  background-color: $secondary-collor;
+
+  padding: 16px 24px;
+
+  border-radius: 8px;
+  border: 1px solid $secondary-collor;
+
+  color: #F5F5F5;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+}
