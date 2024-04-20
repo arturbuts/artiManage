@@ -1,0 +1,73 @@
+  .benefits {
+  background: linear-gradient(91deg, #7DA9A9 -12.82%, rgba(255, 255, 255, 0.4) 66.71%);
+
+  &__container {
+    padding: $gap-big 0;
+  }
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1685px;
+
+    padding-left: 314px;
+
+    &:not(:last-of-type) {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+
+      &:after {
+        position: absolute;
+        display: block;
+        content: '';
+
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 1px;
+
+        background-color: #DDDFE0;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: '';
+
+      top: 0;
+      left: 0;
+
+      width: 208px;
+      height: 136px;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+    }
+
+    &:first-child:before {
+      background-image: url('../icons/benefits/free.svg');
+
+    }
+    &:last-child:before{
+      background-image: url('../icons/benefits/support.svg');
+    }
+  }
+  &__title {
+    @include title;
+
+    font-size: $h4-desk;
+    line-height: $h4-height;
+  }
+  &__descr {
+    @include descr;
+
+    font-size: $text-desk;
+    line-height: $text-height-desk;
+
+    padding-bottom: 7px;
+  }
+
+  }
+

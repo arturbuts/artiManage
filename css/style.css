@@ -867,6 +867,7 @@ body {
   margin-bottom: 52px;
 }
 .tools__item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -876,16 +877,60 @@ body {
 }
 .tools__item:nth-of-type(odd) .tools__content {
   margin-right: 40px;
+  padding-left: 106px;
 }
 .tools__item:nth-of-type(even) .tools__content {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
   margin-left: 40px;
+  padding-top: 106px;
+}
+.tools__item:not(:last-child) {
+  padding-bottom: 52px;
+}
+.tools__item:not(:last-child):after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #DDDFE0;
+  margin-top: 52px;
+}
+.tools__item:first-of-type .tools__content:before {
+  background-image: url("../icons/tools/sales-icon.svg");
+}
+.tools__item:nth-of-type(2) .tools__content:before {
+  background-image: url("../icons/tools/marketing-icon.svg");
+}
+.tools__item:nth-of-type(3) .tools__content:before {
+  background-image: url("../icons/tools/support-icon.svg");
+}
+.tools__item:nth-of-type(4) .tools__content:before {
+  background-image: url("../icons/tools/accounting-icon.svg");
+}
+.tools__item:last-of-type .tools__content:before {
+  background-image: url("../icons/tools/collaboration.svg");
 }
 .tools__content {
+  position: relative;
   width: 100%;
   max-width: 736px;
+}
+.tools__content:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 62px;
+  padding-top: 62px;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 .tools__subtitle {
   margin: 0;
@@ -902,6 +947,21 @@ body {
   font-weight: 400;
   font-size: clamp(1.125rem, 0.359rem + 0.85vw, 1.375rem);
   line-height: clamp(1.75rem, 0.218rem + 1.7vw, 2.25rem);
+}
+.tools__picture-section {
+  width: 100%;
+  max-width: 844px;
+  background-color: #000;
+}
+.tools__picture {
+  display: block;
+}
+.tools__img {
+  display: block;
+  width: 100%;
+  max-width: 844px;
+  max-height: 505px;
+  border: 10px solid #7da9a9;
 }
 .tools__btn-section {
   text-align: center;
@@ -938,18 +998,164 @@ body {
   border-color: #769696;
 }
 
-.tools__picture-section {
+.benefits {
+  background: linear-gradient(91deg, #7DA9A9 -12.82%, rgba(255, 255, 255, 0.4) 66.71%);
+}
+.benefits__container {
+  padding: 52px 0;
+}
+.benefits__wrapper {
+  position: relative;
   width: 100%;
-  max-width: 844px;
-  max-height: 505px;
-  background-color: #000;
-  border: 10px solid #7da9a9;
+  max-width: 1685px;
+  padding-left: 314px;
+}
+.benefits__wrapper:not(:last-of-type) {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+.benefits__wrapper:not(:last-of-type):after {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #DDDFE0;
+}
+.benefits__wrapper:before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 208px;
+  height: 136px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.benefits__wrapper:first-child:before {
+  background-image: url("../icons/benefits/free.svg");
+}
+.benefits__wrapper:last-child:before {
+  background-image: url("../icons/benefits/support.svg");
+}
+.benefits__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  color: #3c3f4a;
+  font-size: clamp(1.5rem, -0.032rem + 1.7vw, 2rem);
+  line-height: clamp(1.75rem, 0.218rem + 1.7vw, 2.25rem);
+}
+.benefits__descr {
+  padding: 0;
+  margin: 0;
+  color: #73778a;
+  font-weight: 400;
+  font-size: clamp(1.125rem, 0.359rem + 0.85vw, 1.375rem);
+  line-height: clamp(1.75rem, 0.218rem + 1.7vw, 2.25rem);
+  padding-bottom: 7px;
 }
 
-.tools__picture {
-  display: block;
+.resources__container {
+  padding: 52px 0;
 }
-
-.tools__img {
+.resources__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  color: #3c3f4a;
+  font-size: clamp(2rem, 0.468rem + 1.7vw, 2.5rem);
+  line-height: clamp(2.813rem, 1.089rem + 1.91vw, 3.375rem);
+  text-align: center;
+  margin-bottom: 52px;
+}
+.resources__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.resources__card:nth-child(odd) .resources__item:first-of-type {
+  width: 56.2056737589%;
+}
+.resources__card:nth-child(odd) .resources__item:last-of-type {
+  width: 40.8392434988%;
+}
+.resources__card:nth-child(even) .resources__item:first-of-type {
+  width: 40.8392434988%;
+}
+.resources__card:nth-child(even) .resources__item:last-of-type {
+  width: 56.2056737589%;
+}
+.resources__card:not(:last-child) {
+  margin-bottom: 52px;
+}
+.resources__card:first-child .resources__item:first-of-type:after {
+  background-image: url("../icons/resources/resources-icon.svg");
+}
+.resources__card:first-child .resources__item:last-of-type:after {
+  background-image: url("../icons/resources/concierge-icon.svg");
+}
+.resources__card:last-child .resources__item:first-of-type:after {
+  background-image: url("../icons/resources/post-icon.svg");
+}
+.resources__card:last-child .resources__item:last-of-type:after {
+  background-image: url("../icons/resources/price-icon.svg");
+}
+.resources__item {
+  position: relative;
   display: block;
+  border: 1px solid #DDDFE0;
+  border-radius: 8px;
+  padding: 42px 50px 45px 214px;
+  min-height: 251px;
+}
+.resources__item:hover span {
+  color: #7da9a9;
+}
+.resources__item span {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding: 16px;
+  border-radius: 8px;
+  color: #3C3F4A;
+}
+.resources__item:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 98px;
+  height: 98px;
+  top: 42px;
+  left: 62px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.resources__subtitle {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  color: #3c3f4a;
+  font-size: clamp(1.5rem, -0.032rem + 1.7vw, 2rem);
+  line-height: clamp(1.75rem, 0.218rem + 1.7vw, 2.25rem);
+  margin-bottom: 24px;
+}
+.resources__descr {
+  padding: 0;
+  margin: 0;
+  color: #73778a;
+  font-weight: 400;
+  font-size: clamp(1.125rem, 0.359rem + 0.85vw, 1.375rem);
+  line-height: clamp(1.75rem, 0.218rem + 1.7vw, 2.25rem);
 }/*# sourceMappingURL=style.css.map */

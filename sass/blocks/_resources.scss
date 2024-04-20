@@ -1,0 +1,114 @@
+.resources {
+  &__container {
+    padding: $gap-big 0;
+  }
+  &__title {
+    @include title;
+
+    font-size: $h2-desk;
+    line-height: $h2-height;
+    text-align: center;
+
+    margin-bottom: 52px;
+  }
+  &__cards {
+  }
+  &__card {
+    display: flex;
+    justify-content: space-between;
+
+    &:nth-child(odd) {
+      .resources__item:first-of-type {
+        width: calc((951 * 100%) / 1692);
+      }
+      .resources__item:last-of-type {
+        width: calc((691 * 100%) / 1692);
+      }
+    }
+    &:nth-child(even) {
+      .resources__item:first-of-type {
+        width: calc((691 * 100%) / 1692);
+      }
+      .resources__item:last-of-type {
+        width: calc((951 * 100%) / 1692);
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 52px;
+    }
+
+    &:first-child {
+      .resources__item:first-of-type:after {
+      background-image: url('../icons/resources/resources-icon.svg');
+      }
+      .resources__item:last-of-type:after {
+        background-image: url('../icons/resources/concierge-icon.svg');
+        }
+    }
+
+    &:last-child {
+      .resources__item:first-of-type:after {
+      background-image: url('../icons/resources/post-icon.svg');
+      }
+      .resources__item:last-of-type:after {
+        background-image: url('../icons/resources/price-icon.svg');
+        }
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    border: 1px solid #DDDFE0;
+    border-radius: 8px;
+    padding: 42px 50px 45px 214px;
+    min-height: 251px;
+
+    &:hover span{
+      color: $secondary-collor;
+    }
+
+    span {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      display: block;
+      width: 48px;
+      height: 48px;
+      padding: 16px;
+      border-radius: 8px;
+
+      color: #3C3F4A;
+    }
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+
+      width: 98px;
+      height: 98px;
+
+      top: 42px;
+      left: 62px;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+    }
+  }
+  &__subtitle {
+    @include title;
+
+    font-size: $h4-desk;
+    line-height: $h4-height;
+
+    margin-bottom: $gap-secondary;
+  }
+  &__descr {
+    @include descr;
+
+    font-size: $text-desk;
+    line-height: $text-height-desk;
+  }
+}
