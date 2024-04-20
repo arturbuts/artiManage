@@ -1,0 +1,87 @@
+@use 'sass:math';
+
+.tools {
+  &__cotainer {
+    padding: $gap-big 0;
+  }
+  &__header {
+    text-align: center;
+    margin-bottom: 52px;
+
+  }
+  &__title {
+    @include title;
+    font-size: $h2-desk;
+    line-height: $h2-height;
+
+    ~ span {
+      @include descr;
+      font-size: $text-desk;
+      line-height: $text-height-desk;
+      }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: $gap-big;
+
+    margin-bottom: $gap-big;
+
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    &:nth-of-type(odd) .tools__content{
+      margin-right: 40px;
+    }
+
+    &:nth-of-type(even) .tools__content{
+      order: 2;
+      margin-left: 40px;
+    }
+  }
+  &__content {
+    width: 100%;
+    max-width: 736px;
+  }
+  &__subtitle {
+    @include title;
+
+    font-size: $h3-desk;
+    line-height: $h3-height;
+  }
+  &__descr {
+    @include descr;
+    font-size: $text-desk;
+    line-height: $text-height-desk;
+  }
+
+  &__btn-section {
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+  }
+  &__btn {
+    @include btn();
+    display: inline-block;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.tools__picture-section {
+  width: 100%;
+  max-width: 844px;
+  max-height: 505px;
+
+  background-color: #000;
+  border: 10px solid $secondary-collor;
+}
+.tools__picture {
+  display: block;
+}
+.tools__img {
+  display: block;
+}

@@ -18,10 +18,10 @@
   &__link {
     display: inline-block;
     padding: 8px 4px;
-    outline: none;
     border-radius: 2px;
+    outline: none;
 
-    transition: animation .3s ease-in-out, outline .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
 
     &:hover {
       background-repeat: no-repeat;

@@ -1,5 +1,5 @@
 .header {
-  .container {
+  &__container {
     padding: 20px 0;
 
     display: flex;
@@ -33,21 +33,6 @@
   line-height: 24px;
   font-weight: 700;
 
-  outline: none;
-
-  &:hover {
-    background-color: $hover;
-    border-color: $hover;
-  }
-
-  &:focus-visible:not(:hover) {
-    background-color: $secondary-collor;
-    border-color: $hover;
-  }
-
-  &:active {
-    background-color: $active;
-    border-color: $active;
-  }
+  margin-right: 24px;
 }
 

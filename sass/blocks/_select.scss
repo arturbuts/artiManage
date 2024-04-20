@@ -1,6 +1,15 @@
 .lang {
 	position: relative;
 	width: 74px;
+  outline: none;
+  border-radius: 2px;
+
+    &:hover .lang__current,
+    &:hover .lang__icon {
+      color: $secondary-collor;
+      fill: $secondary-collor;
+    }
+
     &.is-active{
       .lang__hidden {
         display: block;
