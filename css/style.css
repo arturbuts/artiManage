@@ -1004,12 +1004,6 @@ body {
 .benefits__container {
   padding: 52px 0;
 }
-.benefits__wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 1685px;
-  padding-left: 314px;
-}
 .benefits__wrapper:not(:last-of-type) {
   padding-bottom: 40px;
   margin-bottom: 40px;
@@ -1024,7 +1018,19 @@ body {
   height: 1px;
   background-color: #DDDFE0;
 }
-.benefits__wrapper:before {
+.benefits__wrapper:first-of-type .benefits__content:before {
+  background-image: url("../icons/benefits/free.svg");
+}
+.benefits__wrapper:last-of-type .benefits__content:before {
+  background-image: url("../icons/benefits/support.svg");
+}
+.benefits__content {
+  position: relative;
+  width: 100%;
+  max-width: 1685px;
+  padding-left: 314px;
+}
+.benefits__content:before {
   position: absolute;
   display: block;
   content: "";
@@ -1036,19 +1042,14 @@ body {
   background-position: center;
   background-size: 100%;
 }
-.benefits__wrapper:first-child:before {
-  background-image: url("../icons/benefits/free.svg");
-}
-.benefits__wrapper:last-child:before {
-  background-image: url("../icons/benefits/support.svg");
-}
 .benefits__title {
   margin: 0;
   padding: 0;
   font-weight: 500;
   color: #3c3f4a;
   font-size: clamp(1.5rem, -0.032rem + 1.7vw, 2rem);
-  line-height: clamp(1.75rem, 0.218rem + 1.7vw, 2.25rem);
+  line-height: clamp(2rem, 0.085rem + 2.13vw, 2.625rem);
+  margin-bottom: 16px;
 }
 .benefits__descr {
   padding: 0;
@@ -1077,9 +1078,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-column-gap: 52px;
+     -moz-column-gap: 52px;
+          column-gap: 52px;
 }
 .resources__card:nth-child(odd) .resources__item:first-of-type {
   width: 56.2056737589%;
@@ -1148,7 +1149,7 @@ body {
   font-weight: 500;
   color: #3c3f4a;
   font-size: clamp(1.5rem, -0.032rem + 1.7vw, 2rem);
-  line-height: clamp(1.75rem, 0.218rem + 1.7vw, 2.25rem);
+  line-height: clamp(2rem, 0.085rem + 2.13vw, 2.625rem);
   margin-bottom: 24px;
 }
 .resources__descr {

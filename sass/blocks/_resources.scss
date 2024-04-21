@@ -11,11 +11,9 @@
 
     margin-bottom: 52px;
   }
-  &__cards {
-  }
   &__card {
     display: flex;
-    justify-content: space-between;
+    column-gap: $gap-big;
 
     &:nth-child(odd) {
       .resources__item:first-of-type {
