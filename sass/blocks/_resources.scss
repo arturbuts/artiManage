@@ -64,6 +64,7 @@
 
     &:hover span{
       color: $secondary-collor;
+      transform: scale(1.2);
     }
 
     span {
@@ -77,6 +78,8 @@
       border-radius: 8px;
 
       color: #3C3F4A;
+
+      transition: transform .3s ease-in-out;
     }
 
     &:after {

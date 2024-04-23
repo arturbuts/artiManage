@@ -1,0 +1,62 @@
+.rqmts {
+
+
+  &__btn {
+    @include descr;
+
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    display: flex;
+    align-items: center;
+
+    column-gap: 8px;
+    padding: 8px 0;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      &.is-clicked + .rqmts__content {
+        display: block;
+      }
+
+      &.is-clicked svg {
+        transform: rotate(90deg);
+      }
+  }
+
+  &__content {
+    display: none;
+    color: $text-collor;
+  }
+  &__title,
+  &__subtitle {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  &__title{
+    margin-bottom: 16px;
+  }
+
+  &__subtitle{
+    margin-bottom: 8px;
+  }
+  &__list {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  &__text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+}
+
+
+

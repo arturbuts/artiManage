@@ -1,0 +1,32 @@
+.download {
+  background-image: linear-gradient(180deg, rgba(179, 241, 238, 0.23) 0.13%, #7DA9A9 100.13%);
+  &__container {
+    padding: $gap-big 0;
+    display: flex;
+
+    justify-content: space-between;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    width: 100%;
+    max-width: 632px;
+  }
+  &__title {
+    @include title;
+
+    font-size: $h2-desk;
+    line-height: $h2-height;
+  }
+  &__descr {
+    @include descr;
+
+    font-size: $text-desk;
+    line-height: $text-height-desk;
+  }
+  &__rqmts {
+  }
+}
+
+

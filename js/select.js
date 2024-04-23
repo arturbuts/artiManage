@@ -1,14 +1,15 @@
 let select = function () {
-  let selectHeader = document.querySelectorAll('.lang__main');
-  let selectItem = document.querySelectorAll('.lang__item');
+  // Use consistent selectors for better maintainability
+  let selectHeader = document.querySelectorAll('.lang__main, .selector__main'); // Combine selectors
+  let selectItem = document.querySelectorAll('.lang__item, .selector__item'); // Combine selectors
 
-  // Event listener для скрытия выбора при клике вне области
+  // Event listener for hiding selection on outside click
   document.body.addEventListener('click', function(event) {
     let clickedElement = event.target;
-    let closestLang = clickedElement.closest('.lang');
+    let closestSelector = clickedElement.closest('.lang, .form__selector'); // Handle both classes
 
-    // Проверка, не содержит ли clickedElement или его предки класс "lang"
-    if (!closestLang) {
+    // Check if clicked element or its ancestors don't have the selector class
+    if (!closestSelector) {
       selectHeader.forEach(item => item.parentElement.classList.remove('is-active'));
     }
   });
@@ -27,8 +28,8 @@ let select = function () {
 
   function selectChoose() {
     let text = this.innerText;
-    let select = this.closest('.lang');
-    let currentText = select.querySelector('.lang__current');
+    let select = this.closest('.lang, .form__selector'); // Handle both classes
+    let currentText = select.querySelector('.lang__current, .selector__current'); // Handle both classes
     currentText.innerText = text;
     select.classList.remove('is-active');
   }
