@@ -1,44 +1,56 @@
+@use 'sass:math';
+
 .resources {
+
   &__container {
     padding: $gap-big 0;
   }
+
   &__title {
     @include title;
+
+    margin-bottom: $gap-big;
 
     font-size: $h2-desk;
     line-height: $h2-height;
     text-align: center;
-
-    margin-bottom: 52px;
   }
+
   &__card {
     display: flex;
     column-gap: $gap-big;
 
     &:nth-child(odd) {
+
       .resources__item:first-of-type {
-        width: calc((951 * 100%) / 1692);
+        width: math.div((951 * 100%), 1692);
       }
+
       .resources__item:last-of-type {
-        width: calc((691 * 100%) / 1692);
+        width: math.div((691 * 100%), 1692);
       }
     }
+
     &:nth-child(even) {
+
       .resources__item:first-of-type {
-        width: calc((691 * 100%) / 1692);
+        width: math.div((691 * 100%), 1692);
       }
+
       .resources__item:last-of-type {
-        width: calc((951 * 100%) / 1692);
+        width: math.div((951 * 100%), 1692);
       }
     }
+
     &:not(:last-child) {
-      margin-bottom: 52px;
+      margin-bottom: $gap-big;
     }
 
     &:first-child {
       .resources__item:first-of-type:after {
       background-image: url('../icons/resources/resources-icon.svg');
       }
+
       .resources__item:last-of-type:after {
         background-image: url('../icons/resources/concierge-icon.svg');
         }
@@ -48,6 +60,7 @@
       .resources__item:first-of-type:after {
       background-image: url('../icons/resources/post-icon.svg');
       }
+
       .resources__item:last-of-type:after {
         background-image: url('../icons/resources/price-icon.svg');
         }
@@ -56,14 +69,17 @@
 
   &__item {
     position: relative;
+
     display: block;
-    border: 1px solid #DDDFE0;
-    border-radius: 8px;
     padding: 42px 50px 45px 214px;
     min-height: 251px;
 
+    border: 1px solid #DDDFE0;
+    border-radius: 8px;
+
     &:hover span{
       color: $secondary-collor;
+
       transform: scale(1.2);
     }
 
@@ -71,27 +87,27 @@
       position: absolute;
       bottom: 24px;
       right: 24px;
+
       display: block;
       width: 48px;
       height: 48px;
       padding: 16px;
-      border-radius: 8px;
 
       color: #3C3F4A;
+      border-radius: 8px;
 
       transition: transform .3s ease-in-out;
     }
 
     &:after {
       position: absolute;
-      display: block;
       content: '';
-
-      width: 98px;
-      height: 98px;
-
       top: 42px;
       left: 62px;
+
+      display: block;
+      width: 98px;
+      height: 98px;
 
       background-repeat: no-repeat;
       background-position: center;
@@ -101,10 +117,10 @@
   &__subtitle {
     @include title;
 
+    margin-bottom: $gap-secondary;
+
     font-size: $h4-desk;
     line-height: $h4-height;
-
-    margin-bottom: $gap-secondary;
   }
   &__descr {
     @include descr;

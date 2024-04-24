@@ -4,18 +4,22 @@
   &__cotainer {
     padding: $gap-big 0;
   }
+
   &__header {
     text-align: center;
-    margin-bottom: 52px;
 
+    margin-bottom: 52px;
   }
+
   &__title {
     @include title;
+
     font-size: $h2-desk;
     line-height: $h2-height;
 
     ~ span {
       @include descr;
+
       font-size: $text-desk;
       line-height: $text-height-desk;
       }
@@ -27,8 +31,8 @@
     row-gap: $gap-big;
 
     margin-bottom: $gap-big;
-
   }
+
   &__item {
     position: relative;
     display: flex;
@@ -48,7 +52,7 @@
     &:not(:last-child) {
       padding-bottom: 52px;
 
-      &:after {
+      &::after {
         content: "";
         position: absolute;
         display: block;
@@ -80,30 +84,38 @@
   }
   &__content {
     position: relative;
+
     width: 100%;
     max-width: 736px;
+
     &:before {
       content: "";
       position: absolute;
+      top: 0;
+      left: 0;
+
       display: block;
       width: 62px;
       padding-top: 62px;
-      top: 0;
-      left: 0;
 
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100%;
     }
   }
+
   &__subtitle {
     @include title;
+
+    margin-bottom: $gap-section;
 
     font-size: $h3-desk;
     line-height: $h3-height;
   }
+
   &__descr {
     @include descr;
+
     font-size: $text-desk;
     line-height: $text-height-desk;
   }
@@ -111,27 +123,35 @@
   &__picture-section {
     width: 100%;
     max-width: 844px;
+
     background-color: #000;
   }
+
   &__picture {
     display: block;
   }
+
   &__img {
     display: block;
     width: 100%;
     max-width: 844px;
     max-height: 505px;
+
     border: 10px solid $secondary-collor;
   }
 
   &__btn-section {
     text-align: center;
+
     font-size: 0;
     line-height: 0;
   }
+
   &__btn {
     @include btn();
+
     display: inline-block;
+
     font-size: 24px;
     line-height: 24px;
   }

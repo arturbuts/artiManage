@@ -1,0 +1,50 @@
+.header {
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    padding: 20px 0;
+  }
+
+  &__logo {
+    display: block;
+
+    width: 189px;
+    margin-right: auto;
+
+    outline: none;
+  }
+
+  &__logo-img {
+    display: inherit;
+
+    width: 189px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  &__nav {
+    margin-right: $gap-secondary;
+  }
+
+  &__btn {
+    @include btn();
+
+    padding: 7px 19px;
+
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+
+    color: $white-text;
+
+    margin-right: 24px;
+  }
+}
+
+
+
+
+
+

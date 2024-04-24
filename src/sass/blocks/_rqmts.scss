@@ -1,39 +1,52 @@
 .rqmts {
 
-
   &__btn {
     @include descr;
+
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    padding: 8px 0;
 
     font-size: 1rem;
     line-height: 1.5rem;
 
-    display: flex;
-    align-items: center;
+    &:hover {
+      text-decoration: underline;
+    }
 
-    column-gap: 8px;
-    padding: 8px 0;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
 
-      svg {
-        width: 16px;
-        height: 16px;
-      }
+    &.is-clicked {
+      color: #577676;
+    }
 
-      &.is-clicked + .rqmts__content {
-        display: block;
-      }
+    &.is-clicked + .rqmts__content {
+      display: block;
+    }
 
-      &.is-clicked svg {
-        transform: rotate(90deg);
-      }
+    &.is-clicked svg {
+      transform: rotate(90deg);
+    }
   }
 
   &__content {
     display: none;
+
+    font-size: 14px;
+    line-height: 20px;
+
     color: $text-collor;
   }
+
   &__title,
   &__subtitle {
     margin: 0;
+
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
@@ -46,12 +59,19 @@
   &__subtitle{
     margin-bottom: 8px;
   }
+
   &__list {
     margin: 0;
     margin-bottom: 16px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
   }
+
   &__text {
     margin: 0;
+
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;

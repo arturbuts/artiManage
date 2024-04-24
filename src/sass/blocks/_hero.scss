@@ -5,63 +5,103 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
-  &__container {
-    padding: $gap-main 0;
 
+  &__container {
     display: flex;
     flex-direction: column;
     row-gap: $gap-main;
+
+    padding: $gap-main 0;
   }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
   }
+
   &__cotent {
     width: 100%;
     max-width: 738px;
-    width: 50%;
   }
+
   &__title {
     @include title;
+
     margin-bottom: $gap-section;
+
+    font-size: clamp(2.5rem, 0.152rem + 2.61vw, 3.25rem);
+    line-height: clamp(3.375rem, -0.147rem + 3.91vw, 4.5rem);
   }
+
   &__descr {
     @include descr;
+
+    margin-bottom: 32px;
+
     font-size: $text-desk;
     line-height: $text-height-desk;
-    margin-bottom: 32px;
   }
+
   &__btn {
     @include btn();
+
     align-self: start;
+
     margin-bottom: $gap-section;
   }
+
   &__text {
-    display: block;
     @include descr;
+
+    display: block;
+
     font-size: $text-desk;
     line-height: $text-height-desk;
   }
+
   &__video {
     position: relative;
+
     width: 100%;
     max-width: 848px;
     height: auto;
 
     border: 10px solid $secondary-collor;
+    outline: none;
 
     .start-video {
-      display: block;
       position: absolute;
+      display: block;
       top: 50%;
       left: 50%;
+
+      color: $secondary-collor;
+
       transform: translate(-50%, -50%);
 
       cursor: pointer;
+
+      &:hover {
+        svg g path {
+          color: $main-collor;
+        }
+      }
+
+      &:active {
+        svg g g circle:first-of-type {
+          fill: $secondary-collor;
+        }
+
+        svg g path {
+          color: $grey-lighter;
+        }
+      }
     }
   }
+
   .video {
     position: relative;
+
     width: 100%;
     padding-top: math.div((594 * 100%), 828);
 
@@ -69,6 +109,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
     cursor: pointer;
 
     iframe {

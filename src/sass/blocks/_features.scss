@@ -1,16 +1,21 @@
 .features {
+
   &__container {
     padding: $gap-big 0;
   }
+
   &__title {
     @include title;
+
+    margin-bottom: 40px;
 
     text-align: center;
     font-size: $h2-desk;
     line-height: $h2-height;
-    margin-bottom: 40px;
-    span{
-      font-weight: bold;
+
+    &--bold {
+      font-weight: 600;
+
       span {
         color: $secondary-collor;
       }
@@ -63,8 +68,10 @@
   &__subtitle {
     @include title;
 
+    margin-bottom: $gap-section;
+
     font-size: $h4-desk;
-    line-height: $h2-height;
+    line-height: $h4-height;
   }
 
   &__descr {

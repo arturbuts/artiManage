@@ -32,6 +32,13 @@ let select = function () {
     let currentText = select.querySelector('.lang__current, .selector__current'); // Handle both classes
     currentText.innerText = text;
     select.classList.remove('is-active');
+
+
+    // Update corresponding input field in the form
+    let input = select.querySelector('input[type="hidden"]');
+    if (input) {
+      input.value = text; // Обновляем значение скрытого поля в форме
+    }
   }
 };
 

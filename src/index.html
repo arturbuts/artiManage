@@ -19,7 +19,7 @@
 
         <div class="header__container">
           <a href="#" class="header__logo">
-            <img src="icons/logo.svg" alt="logo" class="logo">
+            <img src="icons/logo.svg" alt="logo" class="header__logo-img">
           </a>
 
           <nav class="header__nav nav">
@@ -43,11 +43,10 @@
             Start a free trial
           </a>
 
-
           <!-- Переключатель на другие языки - кастомка -->
           <div class="header__select lang" tabindex="0" aria-label="language selector">
             <div class="lang__main">
-              <span class="lang__current" aria-label="current language">en</span>
+              <span class="lang__current" aria-label="chosen language">en</span>
               <div class="lang__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -92,10 +91,10 @@
                 </span>
               </div>
 
-              <div class="hero__video">
+              <div class="hero__video" tabindex="0" aria-label="video player">
                 <div class="video" data-src="https://www.youtube.com/embed/OZFAo1PhnL0?autoplay=1">
                 </div>
-                <a class="start-video">
+                <button class="start-video btn-reset" aria-label="video player button">
                   <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="Play button">
                       <g id="Ellipse 80" filter="url(#filter0_d_18_10679)">
@@ -104,7 +103,7 @@
                       </g>
                       <path id="Polygon 2"
                         d="M53.1667 38.4673C53.8334 38.8522 53.8334 39.8145 53.1667 40.1994L33.1667 51.7464C32.5 52.1313 31.6667 51.6501 31.6667 50.8803L31.6667 27.7863C31.6667 27.0165 32.5 26.5354 33.1667 26.9203L53.1667 38.4673Z"
-                        fill="#7DA9AA" />
+                        fill="currentColor" />
                     </g>
                     <defs>
                       <filter id="filter0_d_18_10679" x="0" y="0" width="80" height="80" filterUnits="userSpaceOnUse"
@@ -121,7 +120,7 @@
                       </filter>
                     </defs>
                   </svg>
-                </a>
+                </button>
               </div>
 
             </div>
@@ -198,7 +197,7 @@
         <div class="container">
           <div class="features__container">
             <h2 class="features__title">
-              Must-have features of <span><span>arti</span>Manage</span> that every business needs
+              Must-have features of <span class="features__title--bold"><span>arti</span>Manage</span> that every business needs
             </h2>
             <div class="features__cards">
               <ul class="features__list list-reset">
@@ -456,7 +455,7 @@
               </p>
 
               <div class="download__rqmts rqmts">
-                <button class="rqmts__btn btn-reset is-clicked">
+                <button class="rqmts__btn btn-reset">
                   See technical requirements
 
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -656,6 +655,7 @@
   </div>
   <script src="js/select.js"></script>
   <script src="js/video.js"></script>
+  <script src="js/click.js"></script>
 </body>
 
 </html>

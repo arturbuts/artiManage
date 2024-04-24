@@ -1,23 +1,24 @@
 .nav {
+
   display: flex;
   align-items: center;
+
   &__list {
     display: inherit;
     gap: $gap-section;
   }
-  &__item {
-    color: $secondary-collor;
-    text-align: center;
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
 
+  &__item {
+    font-weight: 500;
+
+    color: $secondary-collor;
   }
 
   &__link {
     display: inline-block;
+
     padding: 8px 4px;
+
     border-radius: 2px;
     outline: none;
 
@@ -32,7 +33,7 @@
       background-size:    100% 1.5px, 1.5px 100%, 100% 1.5px, 1.5px 100%;
       background-position:    0 0, 100% 0, 100% 100%, 0 100%;
 
-      animation: anim-border .3s ease-in-out 1;
+      animation: anim-border .3s ease-in-out;
     }
 
     &:focus-visible:not(:hover) {
