@@ -129,3 +129,40 @@
     line-height: $text-height-desk;
   }
 }
+
+@media (max-width: 1536px) {
+
+  .resources__container {
+    padding: $gap-main 0;
+  }
+
+  .resources__title {
+    margin-bottom: $gap-main;
+
+    font-size: $h2-desk-m;
+    line-height: $h2-height-m;
+  }
+
+  .resources__card {
+
+    column-gap: $gap-main;
+
+    &:not(:last-child) {
+      margin-bottom: $gap-main;
+    }
+  }
+
+  .resources__item {
+
+    padding: 32px 80px 20px 156px;
+    min-height: 216px;
+
+    &:after {
+      top: 32px;
+      left: 44px;
+
+      width: 72px;
+      height: 72px;
+    }
+  }
+}

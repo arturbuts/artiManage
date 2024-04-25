@@ -14,6 +14,7 @@
 
     width: 100%;
     max-width: 632px;
+    margin-right: 40px;
   }
   &__title {
     @include title;
@@ -35,6 +36,32 @@
 
     background-color: #fff;
     border-radius: 12px;
+  }
+}
+
+@media (max-width: 1536px) {
+
+  .download__container {
+    padding: $gap-main 0;
+  }
+
+  .download__content {
+    max-width: 474px;
+  }
+
+  .download__title {
+    font-size: $h2-desk-m;
+    line-height: $h2-height-m;
+  }
+
+  .download__descr {
+    font-size: $text-desk-m;
+    line-height: $text-height-desk-m;
+  }
+
+  .download__form {
+    max-width: 710px;
+    padding: 32px 34.5px;
   }
 }
 

@@ -67,3 +67,14 @@ body {
   overflow: hidden;
 }
 
+
+@media (max-width: 1536px) {
+
+  .container {
+    max-width: $container-max-width-m;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $container-paddings-m;
+    padding-right: $container-paddings-m;
+  }
+}

@@ -221,6 +221,8 @@
   &__button {
     button {
       @include btn();
+
+      padding: 18px 20px;
     }
 
     margin-bottom: 16px;
@@ -241,5 +243,23 @@
       text-decoration-line: underline;
     }
   }
+
+}
+
+@media (max-width: 1536px) {
+
+  .form__item {
+    padding-top: 20px;
+    width: calc((304 * 100%) / 641);
+
+    &--long {
+      width: 100%;
+    }
+  }
+
+  .form__os {
+    margin-bottom: 20px;
+  }
+
 
 }
