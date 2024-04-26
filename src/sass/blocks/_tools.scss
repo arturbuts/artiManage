@@ -224,3 +224,40 @@
     line-height: $text-height-desk-m;
   }
 }
+
+@media (max-width: 1100px) {
+
+  .tools__item {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    row-gap: $gap-main;
+
+    &:nth-of-type(odd) .tools__content {
+      margin-right: 0;
+      padding-left: 0;
+      padding-top: 80px;
+    }
+
+    &:nth-of-type(even) .tools__content {
+      order: 0;
+      margin-left: 0;
+    }
+}
+
+.tools__content {
+  max-width: 100%;
+
+  text-align: center;
+
+  &::before {
+
+  left: 50%;
+  transform: translateX(-50%);
+  }
+}
+
+.tools__picture-section {
+  max-width: 100%;
+}
+}

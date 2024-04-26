@@ -3,8 +3,8 @@
 .hero {
   background-image: url('../img/hero-bg.svg');
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom;
+  background-size: cover;
+  background-position: center;
 
   &__container {
     display: flex;
@@ -174,4 +174,31 @@
       }
     }
   }
+}
+
+
+@media (max-width: 1100px) {
+  .hero {
+
+    background-image: url('../img/hero-bg-mobile.svg');
+
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+
+      row-gap: $gap-main;
+    }
+
+    &__cotent {
+
+      max-width: 90%;
+      margin-right: 0;
+    }
+
+    &__video {
+
+      max-width: 80%;
+    }
+  }
+
 }

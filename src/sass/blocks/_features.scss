@@ -119,3 +119,12 @@
     line-height: $text-height-desk-m;
   }
 }
+
+@media (max-width: 1100px) {
+
+  .features__list {
+
+  justify-content: center;
+  }
+
+}

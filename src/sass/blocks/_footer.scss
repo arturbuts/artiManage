@@ -109,3 +109,14 @@
   }
 
 }
+
+@media (max-width: 1100px) {
+  .footer__container {
+    flex-wrap: wrap;
+    gap: $gap-main;
+  }
+
+  .footer__company-name {
+  order: 2;
+  }
+}

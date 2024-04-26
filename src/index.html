@@ -22,6 +22,12 @@
             <img src="icons/logo.svg" alt="logo" class="header__logo-img">
           </a>
 
+          <button class="hamburger btn-reset">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+
           <nav class="header__nav nav">
             <ul class="nav__list list-reset">
               <li class="nav__item">
@@ -39,8 +45,12 @@
             </ul>
           </nav>
 
-          <a href="#form" class="header__btn btn-reset">
+
+          <a href="#form" class="header__btn header__btn--bg btn-reset">
             Start a free trial
+          </a>
+          <a href="#form" class="header__btn header__btn--sm btn-reset">
+            Start now
           </a>
 
           <!-- Переключатель на другие языки - кастомка -->
@@ -478,9 +488,6 @@
                 </div>
               </div>
 
-
-
-
             </div>
 
             <div class="download__form form">
@@ -599,6 +606,30 @@
               </form>
             </div>
 
+            <div class="download__rqmts rqmts rqmts--mobile">
+              <button class="rqmts__btn rqmts__btn--mobile btn-reset">
+                See technical requirements
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8.58586 8L5.29297 11.2929C4.90244 11.6834 4.90244 12.3166 5.29297 12.7071C5.68349 13.0976 6.31666 13.0976 6.70718 12.7071L10.3536 9.06066C10.9394 8.47487 10.9394 7.52513 10.3536 6.93934L6.70718 3.29289C6.31666 2.90237 5.68349 2.90237 5.29297 3.29289C4.90244 3.68342 4.90244 4.31658 5.29297 4.70711L8.58586 8Z"
+                    fill="currentColor" />
+                </svg>
+              </button>
+
+              <div class="rqmts__content rqmts__content--mobile">
+                <h5 class="rqmts__title">Microsoft Windows / Apple macOS</h5>
+                <h6 class="rqmts__subtitle">Hardware recommendations:</h6>
+                <ul class="rqmts__list">
+                  <li class="rqmts__item">anyLogistix requires 2GB of free disk space.</li>
+                  <li class="rqmts__item">We recommend having 16GB (or more) of memory and modern processor for
+                    optimal performance.</li>
+                  <li class="rqmts__item">An Internet connection is required.</li>
+                </ul>
+                <span class="rqmts__text">JRE is included in anyLogistix installation package.</span>
+              </div>
+            </div>
+
 
           </div>
         </div>
@@ -656,6 +687,7 @@
   <script src="js/select.js"></script>
   <script src="js/video.js"></script>
   <script src="js/click.js"></script>
+  <script src="js/humburger.js"></script>
 </body>
 
 </html>

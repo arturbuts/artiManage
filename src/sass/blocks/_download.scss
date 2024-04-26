@@ -66,3 +66,22 @@
 }
 
 
+@media (max-width: 1100px) {
+
+  .download__container {
+    flex-wrap: wrap;
+    justify-content: start;
+
+    row-gap: $gap-main;
+  }
+
+  .download__content {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .download__form {
+
+    max-width: 100%;
+  }
+}
