@@ -449,16 +449,16 @@ body {
   background: #fff;
   transition: top 0.3s ease, background-color 0.3s ease;
 }
-.header.fixed .header__btn--sm {
+.header.fixed .header__btn {
   background-color: #7da9a9;
   color: #f5f5f5;
   border: 1px solid #7da9a9;
 }
-.header.fixed .header__btn--sm:hover {
+.header.fixed .header__btn:hover {
   background-color: #679B9B;
   border: 1px solid #7da9a9;
 }
-.header.fixed .header__btn--sm:active {
+.header.fixed .header__btn:active {
   background-color: #577676;
   border: 1px solid #7da9a9;
 }
