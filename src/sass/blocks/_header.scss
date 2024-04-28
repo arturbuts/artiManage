@@ -1,5 +1,31 @@
 .header {
+
   min-height: 80px;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    transition: top 0.3s ease, background-color 0.3s ease;
+
+    .header__btn--sm {
+      background-color: $primary-color;
+      color: $grey-lighter;
+      border: 1px solid $primary-color;
+
+      &:hover {
+        background-color: $hover;
+        border: 1px solid $primary-color;
+      }
+
+      &:active {
+        background-color: $active;
+        border: 1px solid $primary-color;
+      }
+    }
+  }
 
   &__container {
     display: flex;
@@ -11,7 +37,8 @@
   &__logo {
     display: block;
 
-    width: 189px;
+    width: 100%;
+    max-width: 189px;
     margin-right: auto;
     padding: 4px 0;
 
@@ -23,8 +50,7 @@
   &__logo-img {
     display: inherit;
 
-    width: 189px;
-    height: 32px;
+    width: 100%;
   }
 
   &__nav {
@@ -40,12 +66,22 @@
     line-height: 1.5rem;
     font-weight: 700;
 
-    color: $white-text;
+    color: $black;
+    background-color: $grey-btn;
+    border: 1px solid $grey-btn;
 
     margin-right: 24px;
 
+    &:hover {
+      color: $white;
+    }
+
+    &:focus-visible:not(:hover) {
+      background-color: $primary-color;
+    }
+
     &--sm {
-    display: none;
+      display: none;
     }
   }
 }
@@ -54,18 +90,29 @@
   .header {
     &__btn {
 
+      margin-right: 16px;
+
       &--bg {
-      display: none;
+        display: none;
       }
 
       &--sm {
-      display: inline-block;
+        display: inline-block;
+        flex-shrink: 0;
       }
+    }
+
+    &__nav {
+      margin-right: 0;
     }
 
     .hamburger {
       order: 4;
       display: block;
+      width: 32px;
+      height: 32px;
+
+      outline: none;
     }
 
     &.active .bar:nth-child(2) {
@@ -77,7 +124,7 @@
     }
 
     &.active .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
+      transform: translateY(0) rotate(-45deg);
     }
 
     &.active .header__btn--sm {
@@ -85,14 +132,41 @@
     }
 
     .lang {
-    display: none;}
+      display: none;
+    }
   }
 
 }
 
 
+@media (max-width: 601px) {
+  .header {
 
+    min-height: 56px;
 
+    &__container {
 
+      justify-content: start;
 
+      padding: 12px 0;
+    }
 
+    &__btn--sm {
+
+      padding: 4px 12px;
+
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+
+    &__logo {
+      width: 104px;
+      height: 18px;
+    }
+  }
+}

@@ -1,10 +1,23 @@
 @use 'sass:math';
 
 .hero {
-  background-image: url('../img/hero-bg.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('../img/hero-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0;
+
+    z-index: -1;
+  }
 
   &__container {
     display: flex;
@@ -21,6 +34,8 @@
   }
 
   &__cotent {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 738px;
     margin-right: 20px;
@@ -73,7 +88,8 @@
     max-width: 848px;
     height: auto;
 
-    border: 10px solid $secondary-collor;
+    border: 10px solid $primary-color;
+    border-radius: 8px;
     outline: none;
 
     .video {
@@ -102,15 +118,14 @@
     }
   }
 
-
-
   .start-video {
     position: absolute;
     display: block;
     top: 50%;
     left: 50%;
 
-    color: $secondary-collor;
+    color: $primary-color;
+    outline: none;
 
     transform: translate(-50%, -50%);
 
@@ -118,13 +133,13 @@
 
     &:hover {
       svg g path {
-        color: $main-collor;
+        color: $hover;
       }
     }
 
     &:active {
       svg g g circle:first-of-type {
-        fill: $secondary-collor;
+        fill: $primary-color;
       }
 
       svg g path {
@@ -135,52 +150,76 @@
 }
 
 @media (max-width: 1536px) {
-  .hero__cotent {
-    max-width: 553px;
-  }
-  .hero__title {
-    font-size: clamp(2.125rem, 1.989rem + 0.68vw, 2.5rem);
-    line-height: clamp(2.875rem, 2.693rem + 0.91vw, 3.375rem);
-  }
 
-  .hero__descr {
-    font-size: $text-desk-m;
-    line-height: $text-height-desk-m;
-  }
+  .hero {
 
-  .hero__video {
-    max-width: 632px;
-  }
+    &__cotent {
+      max-width: 553px;
+    }
 
-  .hero__btn {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    &__title {
+      font-size: clamp(2.125rem, 1.989rem + 0.68vw, 2.5rem);
+      line-height: clamp(2.875rem, 2.693rem + 0.91vw, 3.375rem);
+    }
 
-    padding: 15px 20px;
-  }
+    &__descr {
+      font-size: $text-desk-m;
+      line-height: $text-height-desk-m;
+    }
 
-  .hero__text {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
+    &__video {
+      max-width: 632px;
+    }
 
-  .hero__video {
+    &__btn {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
 
-    .start-video {
+      padding: 15px 20px;
+    }
 
-      svg {
-        width: 60px;
-        height: 60px;
+    &__text {
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+
+    &__video {
+
+      .start-video {
+
+        svg {
+          width: 60px;
+          height: 60px;
+        }
       }
     }
   }
+
 }
 
 
 @media (max-width: 1100px) {
   .hero {
 
-    background-image: url('../img/hero-bg-mobile.svg');
+    &:before {
+      position: absolute;
+      content: "";
+
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      bottom: 0;
+      right: 0;
+      left: 0;
+
+      background-image: url('../img/hero-bg-mobile.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center bottom;
+
+      z-index: -1;
+    }
 
     &__wrapper {
       flex-direction: column;
@@ -199,6 +238,48 @@
 
       max-width: 80%;
     }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .hero {
+    &__container {
+      padding: $gap-secondary 0;
+      row-gap: $gap-secondary;
+    }
+
+    &__cotent {
+      max-width: 100%;
+    }
+
+    &__title {
+      margin-bottom: $gap-sm;
+    }
+
+    &__descr {
+      margin-bottom: $gap-secondary;
+    }
+
+    &__btn {
+      margin-bottom: $gap-sm;
+    }
+
+    &__wrapper {
+      row-gap: $gap-secondary;
+    }
+
+    &__video {
+      max-width: 100%;
+
+      border-width: 5px;
+
+      .start-video svg {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
   }
 
 }

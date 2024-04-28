@@ -20,6 +20,8 @@
     display: flex;
     column-gap: $gap-big;
 
+    outline: none;
+
     &:nth-child(odd) {
 
       .resources__item:first-of-type {
@@ -48,22 +50,22 @@
 
     &:first-child {
       .resources__item:first-of-type:after {
-      background-image: url('../icons/resources/resources-icon.svg');
+        background-image: url('../icons/resources/resources-icon.svg');
       }
 
       .resources__item:last-of-type:after {
         background-image: url('../icons/resources/concierge-icon.svg');
-        }
+      }
     }
 
     &:last-child {
       .resources__item:first-of-type:after {
-      background-image: url('../icons/resources/post-icon.svg');
+        background-image: url('../icons/resources/post-icon.svg');
       }
 
       .resources__item:last-of-type:after {
         background-image: url('../icons/resources/price-icon.svg');
-        }
+      }
     }
   }
 
@@ -77,10 +79,22 @@
     border: 1px solid #DDDFE0;
     border-radius: 8px;
 
-    &:hover span{
-      color: $secondary-collor;
+    outline: none;
+
+    &:hover span {
+      color: $primary-color;
 
       transform: scale(1.2);
+    }
+
+    &:focus-visible:not(:active) span {
+      color: $grey;
+      border: 1px solid $primary-color;
+    }
+
+    &:active span {
+      color: $grey-lighter;
+      background-color: grey;
     }
 
     span {
@@ -89,14 +103,22 @@
       right: 24px;
 
       display: block;
-      width: 48px;
-      height: 48px;
-      padding: 16px;
+      width: 32px;
+      height: 32px;
+
 
       color: #3C3F4A;
       border-radius: 8px;
 
       transition: transform .3s ease-in-out;
+
+      svg {
+        position: relative;
+        top: 45%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+      }
     }
 
     &:after {
@@ -114,6 +136,7 @@
       background-size: 100%;
     }
   }
+
   &__subtitle {
     @include title;
 
@@ -122,6 +145,7 @@
     font-size: $h4-desk;
     line-height: $h4-height;
   }
+
   &__descr {
     @include descr;
 
@@ -132,57 +156,138 @@
 
 @media (max-width: 1536px) {
 
-  .resources__container {
-    padding: $gap-main 0;
-  }
+  .resources {
 
-  .resources__title {
-    margin-bottom: $gap-main;
+    &__container {
+      padding: $gap-main 0;
+    }
 
-    font-size: $h2-desk-m;
-    line-height: $h2-height-m;
-  }
-
-  .resources__card {
-
-    column-gap: $gap-main;
-
-    &:not(:last-child) {
+    &__title {
       margin-bottom: $gap-main;
+
+      font-size: $h2-desk-m;
+      line-height: $h2-height-m;
+    }
+
+    &__card {
+
+      column-gap: $gap-main;
+
+      &:not(:last-child) {
+        margin-bottom: $gap-main;
+      }
+    }
+
+    &__item {
+
+      padding: 32px 80px 20px 156px;
+      min-height: 216px;
+
+      &:after {
+        top: 32px;
+        left: 44px;
+
+        width: 72px;
+        height: 72px;
+      }
+    }
+
+
+    &__subtitle {
+      @include title;
+
+      margin-bottom: $gap-secondary;
+
+      font-size: $h4-desk-m;
+      line-height: $h4-height-m;
+    }
+
+    &__descr {
+      @include descr;
+
+      font-size: $text-desk-m;
+      line-height: $text-height-desk-m;
     }
   }
 
-  .resources__item {
-
-    padding: 32px 80px 20px 156px;
-    min-height: 216px;
-
-    &:after {
-      top: 32px;
-      left: 44px;
-
-      width: 72px;
-      height: 72px;
-    }
-  }
 }
 
 
 @media (max-width: 1100px) {
 
-  .resources__card {
-    flex-wrap: wrap;
-    row-gap: $gap-main;
+  .resources {
+    &__card {
+      flex-wrap: wrap;
+      row-gap: $gap-main;
+      justify-content: center;
 
-    &:nth-child(odd),
-    &:nth-child(even) {
+      &:nth-child(odd),
+      &:nth-child(even) {
 
-      .resources__item:first-of-type,
-      .resources__item:last-of-type {
-        width: 100%;
+        .resources__item:first-of-type,
+        .resources__item:last-of-type {
+          width: 85%;
+        }
       }
     }
   }
 
+}
+
+@media (max-width: 768px) {
+  .resources {
+
+    &__title {
+      margin-bottom: $gap-secondary;
+    }
+
+    &__card {
+      row-gap: $gap-secondary;
+
+      &:not(:last-child) {
+        margin-bottom: $gap-secondary;
+      }
+
+      &:nth-child(odd),
+      &:nth-child(even) {
+
+        .resources__item:first-of-type,
+        .resources__item:last-of-type {
+          width: 100%;
+        }
+      }
+    }
+
+  }
+
+}
+
+@media (max-width: 601px) {
+
+  .resources {
+
+    &__item {
+      padding: 20px;
+      padding-top: 84px;
+      min-height: 220px;
+
+
+      &:after {
+        top: 20px;
+        left: 20px;
+        width: 48px;
+        height: 48px;
+      }
+
+      & span {
+        top: 20px;
+        right: 20px;
+      }
+    }
+
+    &__subtitle {
+      margin-bottom: $gap-sm;
+    }
+  }
 
 }

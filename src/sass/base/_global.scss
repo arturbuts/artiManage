@@ -23,11 +23,12 @@ body {
   font-family: 'Noto Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: $text-collor;
+  color: $grey;
 }
 
 .body-wrapper {
   overflow: hidden;
+
 
   width: 100%;
   position: relative;
@@ -72,9 +73,15 @@ body {
 
   .container {
     max-width: $container-max-width-m;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: $container-paddings-m;
     padding-right: $container-paddings-m;
+  }
+}
+
+@media (max-width: 601px) {
+
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }

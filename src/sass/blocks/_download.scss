@@ -7,6 +7,7 @@
 
     padding: $gap-big 0;
   }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -16,12 +17,14 @@
     max-width: 632px;
     margin-right: 40px;
   }
+
   &__title {
     @include title;
 
     font-size: $h2-desk;
     line-height: $h2-height;
   }
+
   &__descr {
     @include descr;
 
@@ -40,48 +43,82 @@
 }
 
 @media (max-width: 1536px) {
+  .download {
 
-  .download__container {
-    padding: $gap-main 0;
-  }
+    &__container {
+      padding: $gap-main 0;
+    }
 
-  .download__content {
-    max-width: 474px;
-  }
+    &__content {
+      max-width: 474px;
+    }
 
-  .download__title {
-    font-size: $h2-desk-m;
-    line-height: $h2-height-m;
-  }
+    &__title {
+      font-size: $h2-desk-m;
+      line-height: $h2-height-m;
+    }
 
-  .download__descr {
-    font-size: $text-desk-m;
-    line-height: $text-height-desk-m;
-  }
+    &__descr {
+      font-size: $text-desk-m;
+      line-height: $text-height-desk-m;
+    }
 
-  .download__form {
-    max-width: 710px;
-    padding: 32px 34.5px;
+    &__form {
+      max-width: 710px;
+      padding: 32px 34.5px;
+    }
   }
 }
 
 
 @media (max-width: 1100px) {
+  .download {
 
-  .download__container {
-    flex-wrap: wrap;
-    justify-content: start;
+    &__container {
+      flex-wrap: wrap;
+      justify-content: start;
 
-    row-gap: $gap-main;
+      row-gap: $gap-main;
+    }
+
+    &__content {
+      max-width: 100%;
+      margin-right: 0;
+    }
+
+    &__form {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+
+  }
+}
+
+
+@media (max-width: 768px) {
+  .download {
+    &__container {
+      row-gap: $gap-secondary;
+    }
+
+    &__form {
+      max-width: 100%;
+    }
   }
 
-  .download__content {
-    max-width: 100%;
-    margin-right: 0;
+}
+
+@media (max-width: 601px) {
+  .download {
+
+    &__container {
+      padding-bottom: 0;
+    }
+
+    &__form {
+      padding: 16px 20px 24px;
+    }
   }
 
-  .download__form {
-
-    max-width: 100%;
-  }
 }

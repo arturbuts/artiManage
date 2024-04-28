@@ -1,6 +1,6 @@
 .footer {
   padding: 28px 0;
-  background-color: $secondary-collor;
+  background-color: $primary-color;
 
   &__container {
     display: flex;
@@ -39,6 +39,7 @@
 
     &:active {
       transform: scale(1.1);
+
       ::after {
         transform: scaleX(1);
       }
@@ -100,23 +101,48 @@
 
 @media (max-width: 1536px) {
 
-  .footer__list {
-    column-gap: 16px;
-  }
+  .footer {
+    &__list {
+      column-gap: 16px;
+    }
 
-  .footer__icons {
-    column-gap: 19px;
+    &__icons {
+      column-gap: 19px;
+    }
   }
 
 }
 
 @media (max-width: 1100px) {
-  .footer__container {
-    flex-wrap: wrap;
-    gap: $gap-main;
-  }
 
-  .footer__company-name {
-  order: 2;
+  .footer {
+
+    &__container {
+      flex-wrap: wrap;
+      gap: $gap-main;
+    }
+
+    &__company-name {
+      order: 2;
+    }
+  }
+}
+
+@media (max-width: 601px) {
+  .footer {
+
+    &__container {
+      flex-direction: column;
+      align-items: start;
+      gap: $gap-secondary;
+
+    }
+
+    &__list {
+
+      flex-direction: column;
+      align-items: start;
+      row-gap: 16px;
+    }
   }
 }

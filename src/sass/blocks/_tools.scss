@@ -17,12 +17,12 @@
     font-size: $h2-desk;
     line-height: $h2-height;
 
-    ~ span {
+    ~span {
       @include descr;
 
       font-size: $text-desk;
       line-height: $text-height-desk;
-      }
+    }
   }
 
   &__list {
@@ -38,12 +38,12 @@
     display: flex;
     justify-content: space-between;
 
-    &:nth-of-type(odd) .tools__content{
+    &:nth-of-type(odd) .tools__content {
       margin-right: 40px;
       padding-left: 106px;
     }
 
-    &:nth-of-type(even) .tools__content{
+    &:nth-of-type(even) .tools__content {
       order: 2;
       margin-left: 40px;
       padding-top: 106px;
@@ -69,15 +69,19 @@
     &:first-of-type .tools__content:before {
       background-image: url('../icons/tools/sales-icon.svg');
     }
+
     &:nth-of-type(2) .tools__content:before {
       background-image: url('../icons/tools/marketing-icon.svg');
     }
+
     &:nth-of-type(3) .tools__content:before {
       background-image: url('../icons/tools/support-icon.svg');
     }
+
     &:nth-of-type(4) .tools__content:before {
       background-image: url('../icons/tools/accounting-icon.svg');
     }
+
     &:last-of-type .tools__content:before {
       background-image: url('../icons/tools/collaboration.svg');
     }
@@ -133,7 +137,7 @@
   &__img {
     display: block;
 
-    border: 10px solid $secondary-collor;
+    border: 10px solid $primary-color;
   }
 
   &__btn-section {
@@ -157,107 +161,167 @@
 
 @media (max-width: 1536px) {
 
-  .tools__cotainer {
-    padding: $gap-main 0;
-  }
+  .tools {
 
-  .tools__header {
-    margin-bottom: $gap-main;
-  }
+    &__cotainer {
+      padding: $gap-main 0;
+    }
 
-  .tools__title {
-    font-size: $h2-desk-m;
-    line-height: $h2-height-m;
+    &__header {
+      margin-bottom: $gap-main;
+    }
 
-    ~ span {
+    &__title {
+      font-size: $h2-desk-m;
+      line-height: $h2-height-m;
+
+      ~span {
+        font-size: $text-desk-m;
+        line-height: $text-height-desk-m;
+      }
+    }
+
+    &__list {
+      row-gap: $gap-main;
+
+      margin-bottom: $gap-main;
+    }
+
+    &__item {
+
+      &:nth-of-type(odd) .tools__content {
+        padding-left: 80px;
+      }
+
+      &:nth-of-type(even) .tools__content {
+        padding-top: 80px;
+      }
+
+      &:not(:last-child) {
+        padding-bottom: $gap-main;
+
+        &::after {
+          margin-top: $gap-main;
+        }
+      }
+    }
+
+    &__content {
+
+      max-width: 473px;
+
+      &:before {
+        width: 48px;
+        padding-top: 48px;
+      }
+    }
+
+    &__picture-section {
+      max-width: 632px;
+    }
+
+    &__subtitle {
+      font-size: $h3-desk-m;
+      line-height: $h3-height-m;
+    }
+
+    &__descr {
       font-size: $text-desk-m;
       line-height: $text-height-desk-m;
-      }
-  }
-
-  .tools__list {
-    row-gap: $gap-main;
-
-    margin-bottom: $gap-main;
-  }
-
-  .tools__item {
-
-    &:nth-of-type(odd) .tools__content{
-      padding-left: 80px;
-    }
-
-    &:nth-of-type(even) .tools__content{
-      padding-top: 80px;
-    }
-
-    &:not(:last-child) {
-      padding-bottom: $gap-main;
-
-      &::after {
-        margin-top: $gap-main;
-      }
     }
   }
 
-  .tools__content {
-
-    max-width: 473px;
-
-    &:before {
-      width: 48px;
-      padding-top: 48px;
-    }
-  }
-
-  .tools__picture-section {
-    max-width: 632px;
-  }
-
-  .tools__subtitle {
-    font-size: $h3-desk-m;
-    line-height: $h3-height-m;
-  }
-
-  .tools__descr {
-    font-size: $text-desk-m;
-    line-height: $text-height-desk-m;
-  }
 }
 
 @media (max-width: 1100px) {
 
-  .tools__item {
-    flex-wrap: wrap;
-    justify-content: center;
+  .tools {
 
-    row-gap: $gap-main;
+    &__item {
+        flex-wrap: wrap;
+        justify-content: center;
 
-    &:nth-of-type(odd) .tools__content {
-      margin-right: 0;
-      padding-left: 0;
-      padding-top: 80px;
-    }
+        row-gap: $gap-main;
 
-    &:nth-of-type(even) .tools__content {
-      order: 0;
-      margin-left: 0;
-    }
-}
+        &:nth-of-type(odd) .tools__content {
+          margin-right: 0;
+          padding-left: 0;
+          padding-top: 80px;
+        }
 
-.tools__content {
-  max-width: 100%;
+        &:nth-of-type(even) .tools__content {
+          order: 0;
+          margin-left: 0;
+        }
+      }
 
-  text-align: center;
+      &__content {
+        max-width: 100%;
 
-  &::before {
+        text-align: center;
 
-  left: 50%;
-  transform: translateX(-50%);
+        &::before {
+
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      &__picture-section {
+        max-width: 100%;
+      }
   }
+
 }
 
-.tools__picture-section {
-  max-width: 100%;
-}
+@media (max-width: 768px) {
+  .tools {
+    &__header {
+      margin-bottom: $gap-secondary;
+    }
+
+    &__content:before {
+      width: 24px;
+      padding-top: 24px;
+    }
+
+    &__item {
+      row-gap: $gap-secondary;
+
+      &:first-of-type .tools__content:before {
+        background-image: url(../icons/tools/sales-icon@mobile.svg);
+      }
+
+      &:nth-of-type(2) .tools__content:before {
+        background-image: url(../icons/tools/marketing-icon@mobile.svg);
+      }
+
+      &:nth-of-type(3) .tools__content:before {
+        background-image: url(../icons/tools/support-icon@mobile.svg);
+      }
+
+      &:nth-of-type(4) .tools__content:before {
+        background-image: url(../icons/tools/accounting-icon@mobile.svg);
+      }
+
+      &:last-of-type .tools__content:before {
+        background-image: url(../icons/tools/collaboration@mobile.svg);
+      }
+
+
+      &:nth-of-type(odd) .tools__content {
+        padding-top: 40px;
+      }
+
+      &:nth-of-type(even) .tools__content {
+        padding-top: 40px;
+      }
+    }
+
+    &__subtitle {
+
+      margin-bottom: $gap-sm;
+    }
+  }
+
 }
