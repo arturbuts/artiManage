@@ -29,7 +29,6 @@ body {
 .body-wrapper {
   overflow: hidden;
 
-
   width: 100%;
   position: relative;
 }
@@ -77,6 +76,25 @@ body {
     padding-right: $container-paddings-m;
   }
 }
+
+@media (max-width: 1100px) {
+  .fade-block {
+    position: absolute;
+    content: "";
+    display: none;
+
+    top: 0;
+    bottom: 0;
+
+    width: 100%;
+    background-color: rgba(0, 0, 0, .1);
+
+    &.active {
+    display: block;
+    }
+  }
+}
+
 
 @media (max-width: 601px) {
 

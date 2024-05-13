@@ -7,7 +7,7 @@
     display: block;
     text-align: center;
 
-    margin-bottom: 67.5px;
+    margin-bottom: 100px;
   }
 
   &__icons {
@@ -16,7 +16,12 @@
     justify-content: space-between;
     align-items: center;
 
-    color: #42527B;
+    width: 100%;
+    max-width: 1561px;
+    margin: 0 auto;
+
+    color: $grey;
+    opacity: .9;
   }
 }
 
@@ -25,11 +30,20 @@
   .partners {
 
     &__icons {
+      max-width: 1203px;
 
       svg {
         width: auto;
         max-height: 50px;
       }
+    }
+
+    &__text {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 36px;
+
+      margin-bottom: 40px;
     }
   }
 

@@ -26,10 +26,17 @@
 
       .resources__item:first-of-type {
         width: math.div((951 * 100%), 1692);
+          .resources__descr {
+          max-width: 629px;
+          }
       }
 
       .resources__item:last-of-type {
         width: math.div((691 * 100%), 1692);
+
+        .resources__descr {
+          max-width: 369px;
+          }
       }
     }
 
@@ -37,10 +44,18 @@
 
       .resources__item:first-of-type {
         width: math.div((691 * 100%), 1692);
+
+        .resources__descr {
+          max-width: 369px;
+          }
       }
 
       .resources__item:last-of-type {
         width: math.div((951 * 100%), 1692);
+
+        .resources__descr {
+          max-width: 629px;
+          }
       }
     }
 
@@ -73,7 +88,7 @@
     position: relative;
 
     display: block;
-    padding: 42px 50px 45px 214px;
+    padding: 42px 50px 25px 214px;
     min-height: 251px;
 
     border: 1px solid #DDDFE0;
@@ -103,8 +118,8 @@
       right: 24px;
 
       display: block;
-      width: 32px;
-      height: 32px;
+      width: 48px;
+      height: 48px;
 
 
       color: #3C3F4A;

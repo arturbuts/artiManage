@@ -77,8 +77,9 @@
 
     display: block;
 
-    font-size: $text-desk;
-    line-height: $text-height-desk;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.15px;
   }
 
   &__video {
@@ -88,7 +89,7 @@
     max-width: 848px;
     height: auto;
 
-    border: 10px solid $primary-color;
+    border: 2px solid $primary-color;
     border-radius: 8px;
     outline: none;
 
@@ -96,12 +97,13 @@
       position: relative;
 
       width: 100%;
-      padding-top: math.div((594 * 100%), 828);
+      padding-top: math.div((614 * 100%), 848);
 
       background-image: url('../img/thumbnail-video.jpg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+      border-radius: 6px;
 
       cursor: pointer;
 
@@ -165,6 +167,8 @@
     &__descr {
       font-size: $text-desk-m;
       line-height: $text-height-desk-m;
+
+      margin-bottom: 24px;
     }
 
     &__video {
@@ -271,8 +275,6 @@
 
     &__video {
       max-width: 100%;
-
-      border-width: 5px;
 
       .start-video svg {
         width: 80px;

@@ -13,6 +13,8 @@
 
   &__title {
     @include title;
+    margin-bottom: $gap-section;
+
 
     font-size: $h2-desk;
     line-height: $h2-height;
@@ -47,6 +49,10 @@
       order: 2;
       margin-left: 40px;
       padding-top: 106px;
+
+        .tools__descr {
+          max-width: 638px;
+        }
     }
 
     &:not(:last-child) {
@@ -137,7 +143,8 @@
   &__img {
     display: block;
 
-    border: 10px solid $primary-color;
+    border: 5px solid $primary-color;
+    border-radius: 8px;
   }
 
   &__btn-section {
